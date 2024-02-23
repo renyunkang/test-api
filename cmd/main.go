@@ -31,8 +31,8 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	shipv1beta1 "test/api/v1beta1"
-	"test/internal/controller"
+	shipv1beta1 "github.com/renyunkang/test/api/v1beta1"
+	"github.com/renyunkang/test/internal/controller"
 	//+kubebuilder:scaffold:imports
 )
 
@@ -67,8 +67,6 @@ func main() {
 
 	mgr, err := ctrl.NewManager(ctrl.GetConfigOrDie(), ctrl.Options{
 		Scheme:                 scheme,
-		MetricsBindAddress:     metricsAddr,
-		Port:                   9443,
 		HealthProbeBindAddress: probeAddr,
 		LeaderElection:         enableLeaderElection,
 		LeaderElectionID:       "afd071e5.my.domain",

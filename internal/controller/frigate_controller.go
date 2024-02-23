@@ -24,7 +24,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	shipv1beta1 "test/api/v1beta1"
+	shipv1beta1 "github.com/renyunkang/test/api/v1beta1"
 )
 
 // FrigateReconciler reconciles a Frigate object
